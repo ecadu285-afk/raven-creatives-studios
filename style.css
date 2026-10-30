@@ -1,0 +1,511 @@
+/* =========================================
+   NEXORA TECNOLOGIA
+   STYLE.CSS
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #05070b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 7, 11, 0.88);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+.nav {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span,
+footer span {
+    color: #1683ff;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #b8c0cc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #1683ff;
+}
+
+.nav-button {
+    padding: 10px 18px;
+    border: 1px solid #1683ff;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #1683ff;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 75px;
+    background:
+        radial-gradient(circle at 75% 40%, rgba(22, 131, 255, 0.15), transparent 30%),
+        #05070b;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.tag {
+    color: #1683ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #1683ff;
+}
+
+.hero-description {
+    max-width: 600px;
+    color: #aeb7c4;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+.button {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #1683ff;
+    color: #ffffff;
+}
+
+.primary:hover {
+    background: #0d6fd8;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    border: 1px solid #303844;
+    color: #ffffff;
+}
+
+.secondary:hover {
+    border-color: #1683ff;
+    color: #1683ff;
+}
+
+/* =========================================
+   CARD DE CÓDIGO
+   ========================================= */
+
+.hero-card {
+    background: #0b1018;
+    border: 1px solid #1d2735;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+.card-top {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding-left: 15px;
+    background: #101722;
+    border-bottom: 1px solid #1d2735;
+}
+
+.card-top span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #303b4a;
+}
+
+.code {
+    padding: 35px;
+    color: #aeb7c4;
+    font-family: Consolas, monospace;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.indent {
+    padding-left: 30px;
+}
+
+.blue {
+    color: #1683ff;
+}
+
+.green {
+    color: #46d369;
+}
+
+.white {
+    color: #ffffff;
+}
+
+/* =========================================
+   SEÇÕES
+   ========================================= */
+
+.section {
+    padding: 110px 0;
+}
+
+.section-title {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.section-title > p:last-child {
+    color: #9ca6b5;
+}
+
+/* =========================================
+   SERVIÇOS
+   ========================================= */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    padding: 35px;
+    background: #0a0f16;
+    border: 1px solid #1b2532;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-color: #1683ff;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    background: rgba(22, 131, 255, 0.12);
+    color: #1683ff;
+    font-weight: 700;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #929cab;
+    margin-bottom: 25px;
+}
+
+.service-card a {
+    color: #1683ff;
+    font-weight: 700;
+}
+
+/* =========================================
+   PROJETOS
+   ========================================= */
+
+.projects-section {
+    background: #080c12;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.project-image {
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(135deg, rgba(22, 131, 255, 0.15), transparent),
+        #0d131c;
+    border: 1px solid #1d2735;
+    border-radius: 15px;
+}
+
+.project-placeholder {
+    text-align: center;
+}
+
+.project-placeholder span {
+    display: block;
+    color: #1683ff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.project-placeholder strong {
+    font-size: 25px;
+}
+
+.project-category {
+    color: #1683ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.project-info h3 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.project-info > p:not(.project-category) {
+    color: #9ca6b5;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   SOBRE
+   ========================================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.about h2 {
+    font-size: 42px;
+    line-height: 1.15;
+}
+
+.about p:not(.tag) {
+    color: #a6afbd;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   CONTATO
+   ========================================= */
+
+.contact {
+    padding: 120px 0;
+    text-align: center;
+    background:
+        radial-gradient(circle, rgba(22, 131, 255, 0.14), transparent 45%),
+        #080c12;
+}
+
+.contact-content {
+    max-width: 750px;
+}
+
+.contact h2 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contact h2 span {
+    display: block;
+    color: #1683ff;
+}
+
+.contact p:not(.tag) {
+    color: #9ca6b5;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 35px 0;
+    border-top: 1px solid #18212d;
+    background: #05070b;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-content strong {
+    font-size: 20px;
+}
+
+.footer-content p {
+    color: #778291;
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .hero {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .project-info h3 {
+        font-size: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
