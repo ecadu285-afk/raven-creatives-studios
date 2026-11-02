@@ -1,5 +1,5 @@
 /* =========================================
-   NEXORA TECNOLOGIA
+   RAVEN CREATIVES STUDIOS
    STYLE.CSS
    ========================================= */
 
@@ -508,4 +508,130 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+}
+/* PAINEL DE SERVIÇOS RAVEN */
+
+.raven-panel {
+  background: linear-gradient(145deg, #101b35, #172b50);
+  border: 1px solid #315889;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 15px 45px rgba(0, 100, 255, 0.15);
+  color: white;
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+  animation: panelAppear 0.8s ease-out;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.panel-brand {
+  color: #48caff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.panel-status {
+  color: #64e2af;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.panel-services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.service-tile {
+  background: #1b3052;
+  border: 1px solid #36577e;
+  border-radius: 12px;
+  padding: 16px 12px;
+  min-width: 0;
+  transition: transform 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.service-tile:hover {
+  transform: translateY(-5px);
+  border-color: #48caff;
+  box-shadow: 0 8px 22px rgba(72, 202, 255, 0.18);
+}
+
+.tile-icon {
+  display: block;
+  color: #48caff;
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.service-tile h3 {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0 0 5px;
+}
+
+.service-tile p {
+  color: #9db6d5;
+  font-size: 12px;
+  margin: 0;
+}
+
+.panel-footer {
+  color: #9db6d5;
+  font-size: 12px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@keyframes panelAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 420px) {
+  .raven-panel {
+    padding: 14px;
+  }
+
+  .panel-services {
+    gap: 8px;
+  }
+
+  .service-tile {
+    padding: 12px 9px;
+  }
+
+  .service-tile h3 {
+    font-size: 12px;
+  }
+
+  .panel-brand {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .raven-panel,
+  .service-tile {
+    animation: none;
+    transition: none;
+  }
 }
