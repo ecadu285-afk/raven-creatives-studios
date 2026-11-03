@@ -720,7 +720,7 @@ body {
       rgba(0, 0, 0, 0.85) 38%,
       rgba(0, 0, 0, 0.15) 100%
     ),
-    url("imagens/corvo-raven.png");
+    url("corvo-raven.png");
 
   background-size: cover;
   background-position: center;
