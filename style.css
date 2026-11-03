@@ -93,3 +93,49 @@ nav a:hover, nav a:focus-visible { color: var(--green); }
 .contact h2 { font-size: clamp(38px,5vw,60px); line-height: 1.1; margin-bottom: 20px; }
 .contact h2 span { display: block; color: var(--green); }
 .contact p:not(.tag) { color: var(--muted); margin-bottom: 30px; }
+/* MENU RESPONSIVO RAVEN */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid #baff00;
+    border-radius: 8px;
+    color: #baff00;
+    font-size: 26px;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+@media (max-width: 850px) {
+    .nav {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #090d08;
+        border: 1px solid #34451b;
+        border-radius: 0 0 12px 12px;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+
+    .nav nav.active {
+        display: flex;
+    }
+
+    .nav-button {
+        display: none;
+    }
+}
