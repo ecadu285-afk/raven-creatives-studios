@@ -205,3 +205,29 @@ nav a:hover, nav a:focus-visible { color: var(--green); }
     }
 
 }
+/* PROJETOS RESPONSIVOS - RAVEN */
+
+@media (max-width: 850px) {
+
+    .project {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 30px !important;
+    }
+
+    .project-image,
+    .project-info {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .project-image {
+        min-height: 250px;
+    }
+
+    .project-info h3 {
+        font-size: 30px;
+        overflow-wrap: break-word;
+    }
+
+}
