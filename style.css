@@ -319,3 +319,30 @@ nav a:hover, nav a:focus-visible { color: var(--green); }
         animation: none;
     }
 }
+
+/* Raven — imagem do portfólio */
+
+.project-image {
+    overflow: hidden;
+    min-height: 0;
+    background: #080b07;
+}
+
+.project-preview {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+@media (hover: hover) {
+    .project-image:hover .project-preview {
+        transform: scale(1.025);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-preview {
+        transition: none;
+    }
+}
