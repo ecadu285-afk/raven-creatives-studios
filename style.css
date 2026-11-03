@@ -635,3 +635,100 @@ footer {
     transition: none;
   }
 }
+/* NOVA IDENTIDADE VISUAL RAVEN */
+
+:root {
+  --raven-green: #baff00;
+  --raven-black: #050505;
+}
+
+body {
+  background-color: var(--raven-black);
+  color: #ffffff;
+}
+
+.hero {
+  background: linear-gradient(135deg, #050505, #101a05);
+}
+
+.hero h1 span,
+.tag {
+  color: var(--raven-green);
+}
+
+.button.primary {
+  background: var(--raven-green);
+  color: #050505;
+  border-color: var(--raven-green);
+}
+
+.button.primary:hover {
+  background: #d4ff55;
+}
+
+.raven-panel {
+  border: 1px solid var(--raven-green);
+  background: linear-gradient(145deg, #0a0a0a, #111b08);
+}
+
+.service-tile:hover {
+  border-color: var(--raven-green);
+}
+
+.panel-brand,
+.tile-icon {
+  color: var(--raven-green);
+}/* LOGO RAVEN NO CABEÇALHO */
+
+.logo-img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  border: 2px solid #baff00;
+  box-shadow: 0 0 12px rgba(186, 255, 0, 0.25);
+}
+/* CARTÕES DE SERVIÇOS RAVEN */
+
+.service-tile {
+  background: linear-gradient(145deg, #101510, #080b08);
+  border: 1px solid #34451b;
+  border-radius: 14px;
+  transition: 0.3s ease;
+}
+
+.service-tile:hover {
+  border-color: #baff00;
+  box-shadow: 0 0 18px rgba(186, 255, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.service-tile h3 {
+  color: #ffffff;
+}
+
+.service-tile p {
+  color: #b8c5ad;
+}/* CORVO RAVEN NA PÁGINA INICIAL */
+
+.hero {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.98) 0%,
+      rgba(0, 0, 0, 0.85) 38%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    url("imagens/corvo-raven.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-position: 65% center;
+  }
+}
