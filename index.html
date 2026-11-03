@@ -396,7 +396,30 @@
 
     </footer>
 
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const menuMobile = document.getElementById("menuMobile");
 
+menuToggle.addEventListener("click", () => {
+    const aberto = menuMobile.classList.toggle("active");
+
+    menuToggle.textContent = aberto ? "✕" : "☰";
+    menuToggle.setAttribute("aria-expanded", String(aberto));
+    menuToggle.setAttribute(
+        "aria-label",
+        aberto ? "Fechar menu" : "Abrir menu"
+    );
+});
+
+menuMobile.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        menuMobile.classList.remove("active");
+        menuToggle.textContent = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menu");
+    });
+});
+</script>
     <script src="script.js"></script>
 
 </body>
