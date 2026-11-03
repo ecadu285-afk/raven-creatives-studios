@@ -231,3 +231,91 @@ nav a:hover, nav a:focus-visible { color: var(--green); }
     }
 
 }
+
+/* RAVEN — Transições suaves */
+
+/* Revelação discreta durante a rolagem */
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+        opacity 0.65s ease,
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cards com movimentos naturais */
+.service-card,
+.service-tile {
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.service-card:hover,
+.service-tile:hover {
+    transform: translateY(-3px);
+    border-color: rgba(186, 255, 0, 0.55);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões com acabamento discreto */
+.button,
+.nav-button,
+.btn-outline {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Menu mobile com entrada suave */
+@media (max-width: 850px) {
+    .nav nav.active {
+        animation: ravenMenuIn 0.25s ease-out;
+    }
+
+    @keyframes ravenMenuIn {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Acessibilidade: menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal,
+    .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .service-card,
+    .service-tile,
+    .button,
+    .nav-button,
+    .btn-outline {
+        transition: none;
+    }
+
+    .nav nav.active,
+    .raven-panel {
+        animation: none;
+    }
+}
