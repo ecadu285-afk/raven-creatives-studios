@@ -184,3 +184,24 @@ nav a:hover, nav a:focus-visible { color: var(--green); }
         text-align: center;
     }
 }
+/* CORREÇÃO DOS CARTÕES DE SERVIÇOS NO CELULAR */
+
+@media (max-width: 850px) {
+
+    .services {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .service-card {
+        width: 100% !important;
+        min-width: 0;
+        padding: 25px;
+    }
+
+    .service-card h3 {
+        overflow-wrap: break-word;
+    }
+
+}
