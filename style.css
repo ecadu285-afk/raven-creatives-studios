@@ -779,3 +779,40 @@ section.hero {
 .project-info p {
   color: #b8c5ad;
 }
+/* AJUSTES FINAIS DAS CORES RAVEN */
+
+/* Números dos serviços */
+.service-number,
+.service-card .number {
+  color: #baff00 !important;
+  background: #17220b !important;
+}
+
+/* Cartão do projeto */
+.project-visual,
+.project-image {
+  background: linear-gradient(
+    145deg,
+    #101a0b,
+    #050805
+  ) !important;
+  border-color: #34451b !important;
+}
+
+/* Textos de destaque */
+.project-visual .tag,
+.project-image .tag {
+  color: #baff00 !important;
+}
+
+/* Botões com bordas */
+.nav-button,
+.button.secondary {
+  border-color: #baff00 !important;
+}
+
+/* Links */
+.service-card a:hover,
+.project-info a:hover {
+  color: #d4ff55 !important;
+}
