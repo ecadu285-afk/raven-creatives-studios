@@ -743,3 +743,39 @@ section.hero {
     ),
     url("corvo-raven.png") center center / cover no-repeat !important;
 }
+/* IDENTIDADE VISUAL RAVEN - CORES */
+
+:root {
+  --raven-green: #baff00;
+}
+
+/* Títulos destacados */
+.section-title span,
+.project-info .tag,
+.project-info span,
+.contact-content h2 span {
+  color: var(--raven-green);
+}
+
+/* Links dos serviços */
+.service-card a,
+.service-link,
+.project-info a {
+  color: var(--raven-green);
+}
+
+/* Números dos cartões */
+.service-number {
+  color: var(--raven-green);
+}
+
+/* Bordas em destaque */
+.service-card:hover {
+  border-color: var(--raven-green);
+}
+
+/* Textos secundários */
+.section-description,
+.project-info p {
+  color: #b8c5ad;
+}
