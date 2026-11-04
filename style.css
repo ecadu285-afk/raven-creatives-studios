@@ -346,3 +346,117 @@ nav a:hover, nav a:focus-visible { color: var(--green); }
         transition: none;
     }
 }
+
+
+
+/* ==========================================
+   RAVEN ORÇAMENTOS 1.0
+   ========================================== */
+
+.raven-orcamento {
+  width: 100%;
+  max-width: 650px;
+  margin: 48px auto 0;
+  padding: 36px;
+  background: #101410;
+  border: 1px solid rgba(163, 255, 18, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+.raven-orcamento h3 {
+  color: #b5ff39;
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+}
+
+.raven-orcamento > p {
+  color: #b8bdb8;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+#formOrcamento {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#formOrcamento label {
+  color: #f0f0f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+#formOrcamento input,
+#formOrcamento select,
+#formOrcamento textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 16px;
+  color: #ffffff;
+  background: #191f19;
+  border: 1px solid #354035;
+  border-radius: 10px;
+  font: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#formOrcamento input::placeholder,
+#formOrcamento textarea::placeholder {
+  color: #a5aaa5;
+}
+
+#formOrcamento input:focus,
+#formOrcamento select:focus,
+#formOrcamento textarea:focus {
+  outline: none;
+  border-color: #b5ff39;
+  box-shadow: 0 0 0 3px rgba(181, 255, 57, 0.12);
+}
+
+#formOrcamento textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#formOrcamento select {
+  color-scheme: dark;
+}
+
+#formOrcamento button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#formOrcamento button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(181, 255, 57, 0.18);
+}
+
+@media (max-width: 600px) {
+  .raven-orcamento {
+    padding: 22px 18px;
+    margin-top: 32px;
+    border-radius: 14px;
+  }
+
+  .raven-orcamento h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #formOrcamento button,
+  #formOrcamento input,
+  #formOrcamento select,
+  #formOrcamento textarea {
+    transition: none;
+  }
+}
