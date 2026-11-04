@@ -359,6 +359,46 @@
                     Falar pelo WhatsApp
                 </a>
 
+<!-- RAVEN ORÇAMENTOS 1.0 -->
+<div class="raven-orcamento">
+  <h3>Solicite seu orçamento</h3>
+  <p>Conte sobre seu projeto e receba um atendimento personalizado.</p>
+
+  <form id="formOrcamento">
+    <label for="orcNome">Seu nome</label>
+    <input type="text" id="orcNome" name="nome"
+           placeholder="Digite seu nome" required>
+
+    <label for="orcServico">Serviço desejado</label>
+    <select id="orcServico" name="servico" required>
+      <option value="">Selecione um serviço</option>
+      <option value="Site institucional">Site institucional</option>
+      <option value="Landing page">Landing page</option>
+      <option value="Manutenção de computadores">Manutenção de computadores</option>
+      <option value="Suporte técnico">Suporte técnico</option>
+      <option value="Outro serviço">Outro serviço</option>
+    </select>
+
+    <label for="orcPrazo">Prazo desejado</label>
+    <select id="orcPrazo" name="prazo" required>
+      <option value="">Selecione o prazo</option>
+      <option value="Sem urgência">Sem urgência</option>
+      <option value="Até 15 dias">Até 15 dias</option>
+      <option value="Até 7 dias">Até 7 dias</option>
+    </select>
+
+    <label for="orcDescricao">Descreva seu projeto</label>
+    <textarea id="orcDescricao" name="descricao"
+              placeholder="Explique o que você precisa..."
+              rows="5" required></textarea>
+
+    <button type="submit" class="button primary">
+      Solicitar orçamento pelo WhatsApp
+    </button>
+  </form>
+</div>
+<!-- FIM RAVEN ORÇAMENTOS -->
+
             </div>
 
         </section>
