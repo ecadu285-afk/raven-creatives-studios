@@ -1,462 +1,814 @@
 /* RAVEN CREATIVES STUDIOS — CSS organizado */
+
 :root {
+
   --green: #baff00;
+
   --green-soft: #d4ff55;
+
   --black: #050705;
+
   --surface: #0d120b;
+
   --surface-alt: #10190d;
+
   --border: #2c401c;
+
   --muted: #b5c0ae;
+
 }
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
 body { font-family: Arial, Helvetica, sans-serif; background: var(--black); color: #fff; line-height: 1.6; }
+
 a { color: inherit; text-decoration: none; }
+
 .container { width: 90%; max-width: 1150px; margin: 0 auto; }
 
+
+
 /* Cabeçalho */
+
 .header { position: fixed; inset: 0 0 auto; width: 100%; z-index: 1000; background: rgba(5,7,5,.92); border-bottom: 1px solid rgba(186,255,0,.13); backdrop-filter: blur(12px); }
+
 .nav { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+
 .logo { display: inline-flex; align-items: center; flex-shrink: 0; }
+
 .logo-img { width: 66px; height: 66px; object-fit: cover; border-radius: 50%; display: block; border: 2px solid var(--green); box-shadow: 0 0 12px rgba(186,255,0,.22); }
+
 nav { display: flex; align-items: center; gap: 25px; }
+
 nav a { color: #d0d7cc; font-size: 14px; transition: color .2s; }
+
 nav a:hover, nav a:focus-visible { color: var(--green); }
+
 .nav-button { padding: 10px 18px; border: 1px solid var(--green); border-radius: 8px; color: #fff; font-size: 14px; transition: background .2s, color .2s; white-space: nowrap; }
+
 .nav-button:hover { background: var(--green); color: #050505; }
 
+
+
 /* Abertura e imagem do corvo */
+
 .hero { min-height: 100vh; display: flex; align-items: center; padding: 125px 0 70px; background: linear-gradient(90deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.82) 42%, rgba(0,0,0,.18) 100%), url('corvo-raven.png') center / cover no-repeat; }
+
 .hero-content { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); gap: 55px; align-items: center; }
+
 .tag { color: var(--green); font-size: 13px; font-weight: 700; letter-spacing: 2px; margin-bottom: 18px; }
+
 .hero h1 { font-size: clamp(42px,6vw,75px); line-height: 1.08; margin-bottom: 25px; }
+
 .hero h1 span { display: block; color: var(--green); }
+
 .hero-description { max-width: 600px; color: #d1d8cb; font-size: 18px; margin-bottom: 35px; }
+
 .hero-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+
 .button { display: inline-block; padding: 14px 22px; border-radius: 8px; font-weight: 700; transition: background .2s, border-color .2s, transform .2s; }
+
 .button.primary { background: var(--green); color: #050505; border: 1px solid var(--green); }
+
 .button.primary:hover { background: var(--green-soft); transform: translateY(-2px); }
+
 .button.secondary { border: 1px solid var(--green); color: #fff; }
+
 .button.secondary:hover { background: rgba(186,255,0,.12); }
 
+
+
 /* Painel Raven — aceita o nome antigo da classe durante a transição */
+
 .hero-card { overflow: hidden; border-radius: 18px; box-shadow: 0 20px 65px rgba(0,0,0,.55); }
+
 .raven-panel, .nexora-panel { background: linear-gradient(145deg, rgba(8,12,8,.96), rgba(17,27,10,.96)); border: 1px solid var(--green); padding: 22px; width: 100%; max-width: 480px; animation: panelAppear .8s ease-out; }
+
 .panel-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 20px; }
+
 .panel-brand { color: var(--green); font-size: 14px; font-weight: 800; letter-spacing: .5px; }
+
 .panel-status { color: #a8e5a0; font-size: 12px; white-space: nowrap; }
+
 .panel-services { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+
 .service-tile { min-width: 0; padding: 16px 12px; background: linear-gradient(145deg,#101810,#080c08); border: 1px solid var(--border); border-radius: 12px; transition: transform .25s,border-color .25s,box-shadow .25s; }
+
 .service-tile:hover { transform: translateY(-4px); border-color: var(--green); box-shadow: 0 0 18px rgba(186,255,0,.17); }
+
 .tile-icon { display: block; color: var(--green); font-size: 27px; margin-bottom: 10px; }
+
 .service-tile h3 { color: #fff; font-size: 14px; line-height: 1.4; margin-bottom: 5px; }
+
 .service-tile p { color: var(--muted); font-size: 12px; }
+
 .panel-footer { color: var(--muted); font-size: 12px; margin-top: 20px; text-align: center; }
+
 @keyframes panelAppear { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
+
+
 /* Seções e serviços */
+
 .section { padding: 110px 0; }
+
 .section-title { max-width: 700px; margin-bottom: 55px; }
+
 .section-title h2 { font-size: clamp(30px,4vw,42px); line-height: 1.15; margin-bottom: 15px; }
+
 .section-title > p:last-child { color: var(--muted); }
+
 .services { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+
 .service-card { padding: 35px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; transition: transform .25s,border-color .25s; }
+
 .service-card:hover { transform: translateY(-7px); border-color: var(--green); }
+
 .icon { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; border-radius: 8px; background: rgba(186,255,0,.12); color: var(--green); font-weight: 700; }
+
 .service-card h3 { font-size: 22px; margin-bottom: 12px; }
+
 .service-card p { color: var(--muted); margin-bottom: 25px; }
+
 .service-card a { color: var(--green); font-weight: 700; }
+
 .service-card a:hover { color: var(--green-soft); }
 
+
+
 /* Portfólio */
+
 .projects-section { background: #090d08; }
+
 .project { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 50px; align-items: center; }
+
 .project-image { min-height: 330px; display: flex; align-items: center; justify-content: center; background: linear-gradient(145deg,#101a0b,#050805); border: 1px solid var(--border); border-radius: 15px; }
+
 .project-placeholder { text-align: center; padding: 20px; }
+
 .project-placeholder span { display: block; color: var(--green); font-size: 12px; letter-spacing: 2px; margin-bottom: 10px; }
+
 .project-placeholder strong { font-size: 25px; }
+
 .project-category { color: var(--green); font-size: 12px; font-weight: 700; letter-spacing: 2px; margin-bottom: 15px; }
+
 .project-info h3 { font-size: 38px; margin-bottom: 20px; }
+
 .project-info > p:not(.project-category) { color: var(--muted); margin-bottom: 30px; }
+
 .btn { display: inline-block; padding: 12px 20px; border-radius: 8px; font-weight: 700; }
+
 .btn-outline { border: 1px solid var(--green); color: var(--green); transition: background .2s,color .2s; }
+
 .btn-outline:hover { background: var(--green); color: #050505; }
 
+
+
 /* Sobre */
+
 .about { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 80px; align-items: start; }
+
 .about h2 { font-size: clamp(30px,4vw,42px); line-height: 1.15; }
+
 .about p:not(.tag) { color: var(--muted); margin-bottom: 20px; }
 
+
+
 /* Contato */
+
 .contact { padding: 120px 0; text-align: center; background: radial-gradient(circle,rgba(186,255,0,.10),transparent 48%),#090d08; }
+
 .contact-content { max-width: 750px; }
+
 .contact h2 { font-size: clamp(38px,5vw,60px); line-height: 1.1; margin-bottom: 20px; }
+
 .contact h2 span { display: block; color: var(--green); }
+
 .contact p:not(.tag) { color: var(--muted); margin-bottom: 30px; }
+
 /* MENU RESPONSIVO RAVEN */
 
+
+
 .menu-toggle {
+
     display: none;
+
     background: transparent;
+
     border: 1px solid #baff00;
+
     border-radius: 8px;
+
     color: #baff00;
+
     font-size: 26px;
+
     padding: 4px 12px;
+
     cursor: pointer;
+
 }
 
+
+
 @media (max-width: 850px) {
+
     .nav {
+
         position: relative;
+
     }
+
+
 
     .menu-toggle {
+
         display: block;
+
         margin-left: auto;
+
     }
+
+
 
     .nav nav {
+
         display: none;
+
         position: absolute;
+
         top: 100%;
+
         left: 0;
+
         width: 100%;
+
         padding: 20px;
+
         background: #090d08;
+
         border: 1px solid #34451b;
+
         border-radius: 0 0 12px 12px;
+
         flex-direction: column;
+
         gap: 20px;
+
         box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+
     }
+
+
 
     .nav nav.active {
+
         display: flex;
+
     }
+
+
 
     .nav-button {
+
         display: none;
+
     }
+
 }
+
 /* CORREÇÃO DO SITE RAVEN PARA CELULARES */
 
+
+
 @media (max-width: 850px) {
+
+
 
     .hero-content {
+
         display: flex !important;
+
         flex-direction: column !important;
+
         align-items: stretch !important;
+
         gap: 35px !important;
+
     }
+
+
 
     .hero-text {
+
         width: 100%;
+
         min-width: 0;
+
     }
+
+
 
     .hero h1 {
+
         font-size: clamp(36px, 9vw, 48px);
+
         overflow-wrap: break-word;
+
     }
+
+
 
     .hero-card,
+
     .raven-panel {
+
         width: 100% !important;
+
         max-width: 100% !important;
+
         min-width: 0;
+
     }
+
+
 
     .panel-services {
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
     }
+
+
 
     .service-tile {
+
         min-width: 0;
+
         overflow-wrap: break-word;
+
     }
+
+
 
     .panel-header {
+
         flex-wrap: wrap;
+
     }
+
+
 
     .hero-buttons .button {
+
         text-align: center;
+
     }
+
 }
+
 /* CORREÇÃO DOS CARTÕES DE SERVIÇOS NO CELULAR */
 
+
+
 @media (max-width: 850px) {
+
+
 
     .services {
+
         display: grid !important;
+
         grid-template-columns: 1fr !important;
+
         gap: 20px !important;
+
     }
+
+
 
     .service-card {
+
         width: 100% !important;
+
         min-width: 0;
+
         padding: 25px;
+
     }
+
+
 
     .service-card h3 {
+
         overflow-wrap: break-word;
+
     }
 
+
+
 }
+
 /* PROJETOS RESPONSIVOS - RAVEN */
+
+
 
 @media (max-width: 850px) {
 
+
+
     .project {
+
         display: grid !important;
+
         grid-template-columns: minmax(0, 1fr) !important;
+
         gap: 30px !important;
+
     }
+
+
 
     .project-image,
+
     .project-info {
+
         width: 100%;
+
         min-width: 0;
+
     }
+
+
 
     .project-image {
+
         min-height: 250px;
+
     }
+
+
 
     .project-info h3 {
+
         font-size: 30px;
+
         overflow-wrap: break-word;
+
     }
 
+
+
 }
+
+
 
 /* RAVEN — Transições suaves */
 
+
+
 /* Revelação discreta durante a rolagem */
+
 .reveal {
+
     opacity: 0;
+
     transform: translateY(16px);
+
     transition:
+
         opacity 0.65s ease,
+
         transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+
 }
+
+
 
 .reveal.is-visible {
+
     opacity: 1;
+
     transform: translateY(0);
+
 }
+
+
 
 /* Cards com movimentos naturais */
+
 .service-card,
+
 .service-tile {
+
     transition:
+
         transform 0.35s ease,
+
         border-color 0.35s ease,
+
         box-shadow 0.35s ease;
+
 }
+
+
 
 .service-card:hover,
+
 .service-tile:hover {
+
     transform: translateY(-3px);
+
     border-color: rgba(186, 255, 0, 0.55);
+
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
 }
+
+
 
 /* Botões com acabamento discreto */
+
 .button,
+
 .nav-button,
+
 .btn-outline {
+
     transition:
+
         background-color 0.3s ease,
+
         color 0.3s ease,
+
         border-color 0.3s ease,
+
         transform 0.3s ease;
+
 }
+
+
 
 /* Menu mobile com entrada suave */
+
 @media (max-width: 850px) {
+
     .nav nav.active {
+
         animation: ravenMenuIn 0.25s ease-out;
+
     }
+
+
 
     @keyframes ravenMenuIn {
+
         from {
+
             opacity: 0;
+
             transform: translateY(-8px);
+
         }
+
         to {
+
             opacity: 1;
+
             transform: translateY(0);
+
         }
+
     }
+
 }
+
+
 
 /* Acessibilidade: menos movimento */
+
 @media (prefers-reduced-motion: reduce) {
+
     html {
+
         scroll-behavior: auto;
+
     }
+
+
 
     .reveal,
+
     .reveal.is-visible {
+
         opacity: 1;
+
         transform: none;
+
         transition: none;
+
     }
+
+
 
     .service-card,
+
     .service-tile,
+
     .button,
+
     .nav-button,
+
     .btn-outline {
+
         transition: none;
+
     }
 
+
+
     .nav nav.active,
+
     .raven-panel {
+
         animation: none;
+
     }
+
 }
+
+
 
 /* Raven — imagem do portfólio */
 
+
+
 .project-image {
+
     overflow: hidden;
+
     min-height: 0;
+
     background: #080b07;
+
 }
+
+
 
 .project-preview {
+
     display: block;
+
     width: 100%;
+
     height: auto;
+
     transition: transform 0.5s ease;
+
 }
+
+
 
 @media (hover: hover) {
+
     .project-image:hover .project-preview {
+
         transform: scale(1.025);
+
     }
+
 }
 
+
+
 @media (prefers-reduced-motion: reduce) {
+
     .project-preview {
+
         transition: none;
+
     }
+
 }
+/* RAVEN 2.0 — Planos, mensalidades e orçamento */
+.raven-offers,.raven-process { background:#090d08; }
+.raven-subscriptions,.raven-quote-section { background:#060906; }
+.raven-pricing-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px; }
+.raven-price-card { min-width:0;display:flex;flex-direction:column;gap:15px;padding:28px;background:linear-gradient(150deg,#1b2518,#101610);border:1px solid #354b25;border-radius:16px; }
+.raven-price-card.raven-featured { border-color:var(--green);box-shadow:0 0 24px rgba(186,255,0,.08); }
+.raven-pill { color:var(--green);font-weight:800;font-size:12px;letter-spacing:.7px; }
+.raven-price-card h3 { font-size:clamp(29px,3vw,39px);line-height:1.2; }
+.raven-price-card h3 small { font-size:14px;font-weight:400;color:var(--muted); }
+.raven-price-card p,.raven-price-card li,.raven-steps p { color:var(--muted); }
+.raven-price-card ul { list-style:none;padding:0;margin:0 0 14px;flex:1; }
+.raven-price-card li { margin:10px 0;padding-left:19px;position:relative;font-size:14px; }
+.raven-price-card li::before { content:'✓';position:absolute;left:0;color:var(--green); }
+.raven-price-card .button { display:block;text-align:center; }
+.raven-fineprint { color:var(--muted);font-size:13px;margin-top:20px; }
+.raven-steps { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px; }
+.raven-steps>div { padding:22px;background:var(--surface);border:1px solid var(--border);border-radius:12px; }
+.raven-steps strong { color:var(--green);font-size:28px; }
+.raven-steps h3 { margin:8px 0; }
+.raven-quote-form { max-width:850px;padding:30px;background:#111a0e;border:1px solid var(--border);border-radius:18px; }
+.raven-form-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px; }
+.raven-quote-form label { display:block;font-size:14px;font-weight:700;margin-bottom:18px; }
+.raven-quote-form input,.raven-quote-form select,.raven-quote-form textarea { display:block;width:100%;margin-top:8px;padding:13px 14px;border:1px solid #425635;border-radius:9px;background:#080d07;color:#fff;font:inherit;min-width:0; }
+.raven-quote-form input:focus,.raven-quote-form select:focus,.raven-quote-form textarea:focus { outline:2px solid var(--green);outline-offset:1px; }
+.raven-quote-form .raven-submit { cursor:pointer;font:inherit; }
+@media(max-width:850px) { .raven-pricing-grid { grid-template-columns:1fr; }.raven-steps { grid-template-columns:repeat(2,minmax(0,1fr)); }.raven-form-grid { grid-template-columns:1fr;gap:0; } }
+@media(max-width:480px) { .raven-steps { grid-template-columns:1fr; }.raven-quote-form { padding:18px; }.raven-price-card { padding:22px; } }
 
 
+/* RAVEN 2.1 — Painel de serviços interativo */
+.raven-tile-button { appearance:none; width:100%; font:inherit; color:inherit; text-align:left; cursor:pointer; position:relative; }
+.raven-tile-button::after { content:"↗"; position:absolute; right:13px; top:11px; color:var(--green); opacity:0; transform:translate(-4px,4px); transition:opacity .2s,transform .2s; }
+.raven-tile-button:hover::after,.raven-tile-button:focus-visible::after { opacity:1; transform:none; }
+.raven-tile-button:focus-visible { outline:2px solid var(--green); outline-offset:3px; }
+.raven-modal[hidden] { display:none !important; }
+.raven-modal { position:fixed; inset:0; z-index:3000; display:grid; place-items:center; padding:22px; }
+.raven-modal-backdrop { position:absolute; inset:0; background:rgba(0,0,0,.82); backdrop-filter:blur(7px); }
+.raven-modal-dialog { position:relative; width:min(100%,540px); max-height:min(88vh,760px); overflow-y:auto; padding:clamp(24px,5vw,42px); border:1px solid rgba(186,255,0,.65); border-radius:20px; background:linear-gradient(145deg,#131c0f,#070b07); box-shadow:0 30px 100px rgba(0,0,0,.75),0 0 36px rgba(186,255,0,.09); animation:ravenDialogIn .3s cubic-bezier(.2,.8,.2,1); }
+.raven-modal-close { position:absolute; top:14px; right:15px; border:1px solid #465e28; background:#17200f; color:white; width:36px; height:36px; border-radius:10px; cursor:pointer; font-size:18px; }
+.raven-modal-close:hover,.raven-modal-close:focus-visible { border-color:var(--green); color:var(--green); }
+.raven-modal-eyebrow { display:block; color:var(--green); font-size:12px; letter-spacing:1.5px; font-weight:700; margin-bottom:16px; }
+.raven-modal-dialog h2 { font-size:clamp(27px,5vw,38px); line-height:1.15; margin:0 36px 14px 0; }
+.raven-modal-dialog p { color:var(--muted); margin-bottom:22px; }
+.raven-modal-dialog ul { list-style:none; display:grid; gap:12px; margin:0 0 28px; padding:0; }
+.raven-modal-dialog li { padding:12px 14px 12px 38px; border:1px solid #283b1b; border-radius:10px; background:#111a0e; position:relative; }
+.raven-modal-dialog li::before { content:"✓"; position:absolute; left:14px; color:var(--green); font-weight:800; }
+.raven-modal-cta { display:inline-flex; justify-content:center; width:100%; }
+body.raven-modal-open { overflow:hidden; }
+@keyframes ravenDialogIn { from { opacity:0; transform:translateY(18px) scale(.97); } to { opacity:1; transform:none; } }
+@media (prefers-reduced-motion:reduce) { .raven-modal-dialog { animation:none; } .raven-tile-button::after { transition:none; } }
 
-/* ==========================================
-   RAVEN ORÇAMENTOS 1.0
-   ========================================== */
+/* RAVEN 3.0 — Experience Lab */
+.raven-panel { position:relative; isolation:isolate; }
+.raven-live-dot { display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);margin-right:5px; }
+.raven-tile-hint { display:block;color:var(--green);font-size:11px;font-weight:700;letter-spacing:.2px;margin-top:13px;opacity:.8; }
+.raven-tile-button { overflow:hidden; transition:transform .32s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s,background .3s; }
+.raven-tile-button::before { content:"";position:absolute;inset:0;background:radial-gradient(circle at 100% 0%,rgba(186,255,0,.12),transparent 65%);opacity:0;transition:opacity .3s;pointer-events:none; }
+.raven-tile-button:hover::before,.raven-tile-button:focus-visible::before { opacity:1; }
+.raven-tile-button:hover,.raven-tile-button:focus-visible { background:#172513;box-shadow:0 12px 30px rgba(0,0,0,.4),0 0 22px rgba(186,255,0,.12); }
+.raven-modal-dialog { width:min(100%,690px); }
+.raven-modal-topline { display:flex;justify-content:space-between;gap:10px;color:#9fba88;font-size:10px;font-weight:700;letter-spacing:1.2px;margin-bottom:18px; }
+.raven-status-live { float:right;color:#a9d477;letter-spacing:0;font-size:10px; }
+.raven-modal-tabs { display:flex;gap:7px;flex-wrap:wrap;border-bottom:1px solid #344827;padding-bottom:11px;margin-bottom:20px; }
+.raven-tab { border:1px solid #344827;background:#0c130a;color:#bdcbb5;border-radius:9px;padding:10px 14px;font:inherit;font-size:13px;cursor:pointer;transition:background .2s,color .2s,border-color .2s; }
+.raven-tab:hover,.raven-tab:focus-visible { border-color:var(--green); }
+.raven-tab.is-active { background:var(--green);color:#071006;border-color:var(--green);font-weight:800; }
+.raven-tab-panel[hidden] { display:none!important; }
+.raven-tab-panel { animation:ravenTabIn .3s ease-out;min-height:160px; }
+@keyframes ravenTabIn { from { opacity:0;transform:translateY(7px); } to { opacity:1;transform:none; } }
+.raven-modal-dialog ul { margin-bottom:18px; }
+.raven-modal-actions { display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;margin-top:20px; }
+.raven-modal-next { padding:13px 15px;border-radius:9px;border:1px solid #527235;background:#14210e;color:#d8f5bd;font:inherit;font-size:13px;font-weight:700;cursor:pointer; }
+.raven-modal-next:hover { border-color:var(--green); }
+.raven-demo-frame { padding:15px;border:1px solid #344827;border-radius:13px;background:#0a1009; }
+.raven-demo-header { font-size:11px;font-weight:800;letter-spacing:1.3px;color:var(--green);margin-bottom:15px; }
+.raven-browser { overflow:hidden;border:1px solid #344827;border-radius:11px;background:#090d08; }
+.raven-browser-bar { background:#1a2616;color:#a4bd95;padding:10px 15px;font-size:11px;letter-spacing:1px; }
+.raven-browser-body { background:radial-gradient(circle at 90% 10%,#304a18,transparent 60%),linear-gradient(130deg,#0c150b,#070b06);padding:clamp(18px,5vw,34px); }
+.raven-browser-tag { font-size:10px;letter-spacing:1.5px;color:var(--green);font-weight:800; }
+.raven-browser-body h3 { font-size:clamp(20px,4vw,30px);line-height:1.2;margin:12px 0; }
+.raven-browser-body p { margin:0 0 20px;font-size:13px; }
+.raven-browser-link { display:inline-block;border:1px solid var(--green);border-radius:8px;padding:10px 13px;color:var(--green);font-size:12px;font-weight:700; }
+.raven-browser-link:hover { background:var(--green);color:#050705; }
+.raven-demo-lead { font-size:14px; }
+.raven-demo-steps { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px; }
+.raven-demo-step { border:1px solid #344827;border-radius:9px;padding:13px 10px;min-width:0; }
+.raven-demo-step span { display:block;color:var(--green);font-size:22px;font-weight:800;margin-bottom:6px; }
+.raven-demo-step strong { font-size:12px;line-height:1.4;display:block; }
+.raven-demo-note { font-size:12px;margin:14px 0 0!important; }
+.raven-faq-item { border:1px solid #344827;border-radius:10px;margin-bottom:9px;background:#10180d; }
+.raven-faq-item summary { padding:13px 15px;cursor:pointer;font-weight:700;font-size:13px; }
+.raven-faq-item summary::marker { color:var(--green); }
+.raven-faq-item p { padding:0 15px 15px;margin:0!important;font-size:13px; }
+@media(max-width:550px) { .raven-modal { padding:10px; }.raven-modal-dialog { max-height:94dvh;padding:25px 17px; }.raven-modal-actions { grid-template-columns:1fr; }.raven-demo-steps { grid-template-columns:1fr; }.raven-modal-topline span:last-child { display:none; }.raven-tab { padding:9px 10px;font-size:12px; } }
+@media(prefers-reduced-motion:reduce) { .raven-tab-panel { animation:none; }.raven-tile-button,.raven-tile-button::before { transition:none; } }
 
-.raven-orcamento {
-  width: 100%;
-  max-width: 650px;
-  margin: 48px auto 0;
-  padding: 36px;
-  background: #101410;
-  border: 1px solid rgba(163, 255, 18, 0.25);
-  border-radius: 20px;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
-  text-align: left;
-}
-
-.raven-orcamento h3 {
-  color: #b5ff39;
-  font-size: 1.7rem;
-  margin-bottom: 12px;
-}
-
-.raven-orcamento > p {
-  color: #b8bdb8;
-  line-height: 1.6;
-  margin-bottom: 28px;
-}
-
-#formOrcamento {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-#formOrcamento label {
-  color: #f0f0f0;
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-top: 8px;
-}
-
-#formOrcamento input,
-#formOrcamento select,
-#formOrcamento textarea {
-  width: 100%;
-  min-width: 0;
-  padding: 14px 16px;
-  color: #ffffff;
-  background: #191f19;
-  border: 1px solid #354035;
-  border-radius: 10px;
-  font: inherit;
-  box-sizing: border-box;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-#formOrcamento input::placeholder,
-#formOrcamento textarea::placeholder {
-  color: #a5aaa5;
-}
-
-#formOrcamento input:focus,
-#formOrcamento select:focus,
-#formOrcamento textarea:focus {
-  outline: none;
-  border-color: #b5ff39;
-  box-shadow: 0 0 0 3px rgba(181, 255, 57, 0.12);
-}
-
-#formOrcamento textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-#formOrcamento select {
-  color-scheme: dark;
-}
-
-#formOrcamento button {
-  width: 100%;
-  margin-top: 16px;
-  padding: 16px 20px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-#formOrcamento button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(181, 255, 57, 0.18);
-}
-
-@media (max-width: 600px) {
-  .raven-orcamento {
-    padding: 22px 18px;
-    margin-top: 32px;
-    border-radius: 14px;
-  }
-
-  .raven-orcamento h3 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #formOrcamento button,
-  #formOrcamento input,
-  #formOrcamento select,
-  #formOrcamento textarea {
-    transition: none;
-  }
-}
+/* RAVEN 3.1 — Orçamento organizado em cartões */
+.raven-quote-form { max-width:1100px; margin-inline:auto; }
+.raven-choice-fieldset { border:0; min-width:0; margin:12px 0 24px; padding:0; }
+.raven-choice-fieldset legend { font-size:20px; font-weight:800; color:#fff; padding-bottom:7px; }
+.raven-choice-intro { color:var(--muted); font-size:14px; margin:0 0 23px; }
+.raven-choice-category { margin-bottom:26px; }
+.raven-choice-category h3 { font-size:17px; color:var(--green); margin-bottom:13px; }
+.raven-choice-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; }
+.raven-quote-form label.raven-choice-card { position:relative; display:block; margin:0; cursor:pointer; min-width:0; }
+.raven-choice-card input { position:absolute; opacity:0; width:1px; height:1px; pointer-events:none; }
+.raven-choice-content { position:relative; display:flex; flex-direction:column; align-items:flex-start; gap:8px; min-height:166px; padding:19px; border:1px solid #34462b; border-radius:13px; background:linear-gradient(145deg,#121d10,#090e09); transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease,background .25s ease; }
+.raven-choice-content strong { font-size:17px; line-height:1.3; padding-right:24px; }
+.raven-choice-content b { color:var(--green); font-size:19px; }
+.raven-choice-content small { color:var(--muted); font-size:12px; font-weight:400; line-height:1.5; }
+.raven-choice-check { position:absolute; top:14px; right:14px; width:23px; height:23px; display:grid; place-items:center; border:1px solid #4b653b; border-radius:50%; color:transparent; transition:all .2s; }
+.raven-choice-card:hover .raven-choice-content { transform:translateY(-3px); border-color:var(--green); box-shadow:0 10px 24px rgba(0,0,0,.25); }
+.raven-choice-card input:checked + .raven-choice-content { border-color:var(--green); background:linear-gradient(145deg,#1c3210,#10190c); box-shadow:0 0 0 1px rgba(186,255,0,.25),0 12px 30px rgba(0,0,0,.25); }
+.raven-choice-card input:checked + .raven-choice-content .raven-choice-check { color:#050705; background:var(--green); border-color:var(--green); }
+.raven-choice-card input:focus-visible + .raven-choice-content { outline:3px solid var(--green); outline-offset:3px; }
+.raven-selected-summary { padding:14px 17px; margin:0 0 23px; border-radius:10px; background:#182611; color:#d7ffc0; border:1px solid #405a2b; font-weight:700; }
+@media(max-width:800px){.raven-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:520px){.raven-choice-grid{grid-template-columns:1fr;}.raven-choice-content{min-height:unset;padding:16px;}}
+@media(prefers-reduced-motion:reduce){.raven-choice-content,.raven-choice-check{transition:none!important;}.raven-choice-card:hover .raven-choice-content{transform:none;}}

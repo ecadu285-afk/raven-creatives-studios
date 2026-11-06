@@ -36,6 +36,9 @@
 <nav id="menuMobile">
     <a href="#inicio">Início</a>
     <a href="#servicos">Serviços</a>
+    <a href="#planos">Planos</a>
+    <a href="#mensalidades">Mensalidades</a>
+    <a href="#orcamento">Orçamento</a>
     <a href="#projetos">Projetos</a>
     <a href="#sobre">Sobre</a>
     <a href="#contato">Contato</a>
@@ -98,34 +101,34 @@
 
   <div class="panel-services">
 
-    <div class="service-tile">
+    <button class="service-tile raven-tile-button" type="button" data-raven-service="sites" aria-haspopup="dialog" aria-label="Ver detalhes de Criação de Sites">
       <span class="tile-icon">⌘</span>
       <h3>Criação de Sites</h3>
-      <p>Web Design</p>
-    </div>
+      <p>Web Design</p><span class="raven-tile-hint">Explorar solução ↗</span>
+    </button>
 
-    <div class="service-tile">
+    <button class="service-tile raven-tile-button" type="button" data-raven-service="pc" aria-haspopup="dialog" aria-label="Ver detalhes de Manutenção PC">
       <span class="tile-icon">▣</span>
       <h3>Manutenção PC</h3>
-      <p>Hardware</p>
-    </div>
+      <p>Hardware</p><span class="raven-tile-hint">Explorar solução ↗</span>
+    </button>
 
-    <div class="service-tile">
+    <button class="service-tile raven-tile-button" type="button" data-raven-service="suporte" aria-haspopup="dialog" aria-label="Ver detalhes de Suporte Técnico">
       <span class="tile-icon">◈</span>
       <h3>Suporte Técnico</h3>
-      <p>Assistência</p>
-    </div>
+      <p>Assistência</p><span class="raven-tile-hint">Explorar solução ↗</span>
+    </button>
 
-    <div class="service-tile">
+    <button class="service-tile raven-tile-button" type="button" data-raven-service="redes" aria-haspopup="dialog" aria-label="Ver detalhes de Redes e TI">
       <span class="tile-icon">◎</span>
       <h3>Redes e TI</h3>
-      <p>Conectividade</p>
-    </div>
+      <p>Conectividade</p><span class="raven-tile-hint">Explorar solução ↗</span>
+    </button>
 
   </div>
 
   <div class="panel-footer">
-    Tecnologia que transforma ideias.
+    <span class="raven-live-dot" aria-hidden="true"></span> Escolha um serviço e descubra o que podemos criar para você.
   </div>
 
 </div>
@@ -136,6 +139,32 @@
 
         </section>
 
+
+        <!-- Janela interativa dos serviços do painel -->
+        <div class="raven-modal" id="ravenServiceModal" hidden>
+          <div class="raven-modal-backdrop" data-raven-close></div>
+          <section class="raven-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="ravenModalTitle" aria-describedby="ravenModalDescription" tabindex="-1">
+            <button class="raven-modal-close" type="button" data-raven-close aria-label="Fechar detalhes">✕</button>
+            <span class="raven-modal-eyebrow">✦ RAVEN / EXPERIENCE LAB <span class="raven-status-live">● EXPLORAR</span></span>
+            <div class="raven-modal-topline"><span id="ravenModalIndex">01 / 04</span><span>INTERACTIVE EXPERIENCE</span></div>
+            <h2 id="ravenModalTitle"></h2>
+            <p id="ravenModalDescription"></p>
+            <div class="raven-modal-tabs" role="tablist" aria-label="Detalhes do serviço">
+              <button class="raven-tab is-active" id="ravenTabOverview" type="button" role="tab" aria-selected="true" aria-controls="ravenOverview">Visão geral</button>
+              <button class="raven-tab" id="ravenTabDemo" type="button" role="tab" aria-selected="false" aria-controls="ravenDemo">Experiência</button>
+              <button class="raven-tab" id="ravenTabFaq" type="button" role="tab" aria-selected="false" aria-controls="ravenFaq">Dúvidas</button>
+            </div>
+            <div class="raven-tab-panel" id="ravenOverview" role="tabpanel" aria-labelledby="ravenTabOverview"><ul id="ravenModalList"></ul></div>
+            <div class="raven-tab-panel" id="ravenDemo" role="tabpanel" aria-labelledby="ravenTabDemo" hidden>
+              <div class="raven-demo-frame" id="ravenDemoContent"></div>
+            </div>
+            <div class="raven-tab-panel" id="ravenFaq" role="tabpanel" aria-labelledby="ravenTabFaq" hidden><div id="ravenFaqContent"></div></div>
+            <div class="raven-modal-actions">
+              <a class="button primary raven-modal-cta" id="ravenModalCta" href="#orcamento">Solicitar orçamento ↗</a>
+              <button type="button" class="raven-modal-next" id="ravenModalNext">Próxima solução →</button>
+            </div>
+          </section>
+        </div>
 
         <section id="servicos" class="section">
 
@@ -232,6 +261,60 @@
 
         </section>
 
+
+
+<section id="planos" class="section raven-offers">
+  <div class="container">
+    <div class="section-title"><p class="tag">INVISTA NA SUA PRESENÇA DIGITAL</p><h2>Nossos planos de criação</h2><p>Escolha a solução ideal para o seu negócio.</p></div>
+    <div class="raven-pricing-grid">
+      <article class="raven-price-card"><span class="raven-pill">RAVEN START</span><h3>R$ 450</h3><p>Landing page profissional</p><ul><li>Página única responsiva</li><li>Apresentação de serviços</li><li>Contato e redes sociais</li><li>Botão de WhatsApp</li></ul><a class="button primary raven-select-plan" href="#orcamento" data-plan="Raven Start — R$ 450">Solicitar orçamento</a></article>
+      <article class="raven-price-card raven-featured"><span class="raven-pill">RAVEN BUSINESS</span><h3>R$ 990</h3><p>Site institucional completo</p><ul><li>Até cinco páginas</li><li>Portfólio e serviços</li><li>Formulário de contato</li><li>SEO básico</li></ul><a class="button primary raven-select-plan" href="#orcamento" data-plan="Raven Business — R$ 990">Solicitar orçamento</a></article>
+      <article class="raven-price-card"><span class="raven-pill">RAVEN PREMIUM</span><h3>R$ 1.800+</h3><p>Projetos personalizados</p><ul><li>Funcionalidades sob medida</li><li>Catálogos e integrações</li><li>Painéis conforme escopo</li><li>Proposta personalizada</li></ul><a class="button primary raven-select-plan" href="#orcamento" data-plan="Raven Premium — R$ 1.800+">Solicitar orçamento</a></article>
+    </div><p class="raven-fineprint">Valores iniciais. Domínio, hospedagem e serviços de terceiros podem ser cobrados separadamente.</p>
+  </div>
+</section>
+<section id="mensalidades" class="section raven-subscriptions">
+  <div class="container">
+    <div class="section-title"><p class="tag">CUIDAMOS DO SEU SITE</p><h2>Planos mensais de manutenção</h2><p>Suporte e acompanhamento contínuo, com escopo definido.</p></div>
+    <div class="raven-pricing-grid">
+      <article class="raven-price-card"><span class="raven-pill">RAVEN CARE</span><h3>R$ 49,90 <small>/mês</small></h3><p>Monitoramento essencial</p><ul><li>Verificação mensal do site</li><li>Teste de links e formulário</li><li>Relatório simples</li></ul><a class="button primary raven-select-plan" href="#orcamento" data-plan="Raven Care — R$ 49,90/mês">Contratar plano</a></article>
+      <article class="raven-price-card raven-featured"><span class="raven-pill">RAVEN PRO</span><h3>R$ 99,90 <small>/mês</small></h3><p>Para negócios em evolução</p><ul><li>Tudo do Care</li><li>Até 2 pequenas alterações/mês</li><li>Verificação de backup*</li></ul><a class="button primary raven-select-plan" href="#orcamento" data-plan="Raven Pro — R$ 99,90/mês">Contratar plano</a></article>
+      <article class="raven-price-card"><span class="raven-pill">RAVEN MAX</span><h3>R$ 199,90 <small>/mês</small></h3><p>Acompanhamento avançado</p><ul><li>Tudo do Pro</li><li>Até 5 pequenas alterações/mês</li><li>Suporte prioritário em horário comercial</li></ul><a class="button primary raven-select-plan" href="#orcamento" data-plan="Raven Max — R$ 199,90/mês">Contratar plano</a></article>
+    </div><p class="raven-fineprint">*Backup depende da infraestrutura contratada. Alterações pequenas não incluem novas páginas, funcionalidades ou redesign. Valores e condições sujeitos a proposta.</p>
+  </div>
+</section>
+<section id="processo" class="section raven-process">
+ <div class="container"><div class="section-title"><p class="tag">TRANSPARÊNCIA EM CADA ETAPA</p><h2>Como funciona</h2></div>
+ <div class="raven-steps"><div><strong>01</strong><h3>Solicitação</h3><p>Você descreve seu projeto.</p></div><div><strong>02</strong><h3>Proposta</h3><p>Definimos escopo, prazo e valor.</p></div><div><strong>03</strong><h3>Desenvolvimento</h3><p>Construímos e validamos a solução.</p></div><div><strong>04</strong><h3>Entrega</h3><p>Publicação, orientações e suporte contratado.</p></div></div>
+ </div>
+</section>
+<section id="orcamento" class="section raven-quote-section">
+ <div class="container"><div class="section-title"><p class="tag">VAMOS TIRAR SUA IDEIA DO PAPEL</p><h2>Solicite um orçamento</h2><p>Preencha os dados para preparar uma mensagem organizada no WhatsApp.</p></div>
+ <form id="ravenQuoteForm" class="raven-quote-form">
+  <div class="raven-form-grid"><label>Seu nome <input id="ravenName" name="nome" required maxlength="100" autocomplete="name" placeholder="Como podemos chamar você?"></label><label>Seu negócio <input id="ravenBusiness" name="negocio" maxlength="120" placeholder="Ex.: Barbearia, loja, autônomo"></label></div>
+  <fieldset class="raven-choice-fieldset"><legend>01 · Escolha o que você precisa</legend><p class="raven-choice-intro">Selecione um cartão para continuar. Você pode mudar sua escolha a qualquer momento.</p>
+   <div class="raven-choice-category"><h3>Criação de sites</h3><div class="raven-choice-grid">
+    <label class="raven-choice-card"><input type="radio" name="servico" value="Raven Start — R$ 450" required><span class="raven-choice-content"><span class="raven-choice-check" aria-hidden="true">✓</span><strong>Raven Start</strong><b>R$ 450</b><small>Landing page responsiva</small></span></label>
+    <label class="raven-choice-card"><input type="radio" name="servico" value="Raven Business — R$ 990" required><span class="raven-choice-content"><span class="raven-choice-check" aria-hidden="true">✓</span><strong>Raven Business</strong><b>R$ 990</b><small>Site institucional completo</small></span></label>
+    <label class="raven-choice-card"><input type="radio" name="servico" value="Raven Premium — R$ 1.800+" required><span class="raven-choice-content"><span class="raven-choice-check" aria-hidden="true">✓</span><strong>Raven Premium</strong><b>R$ 1.800+</b><small>Projetos e integrações sob medida</small></span></label>
+   </div></div>
+   <div class="raven-choice-category"><h3>Planos mensais</h3><div class="raven-choice-grid">
+    <label class="raven-choice-card"><input type="radio" name="servico" value="Raven Care — R$ 49,90/mês" required><span class="raven-choice-content"><span class="raven-choice-check" aria-hidden="true">✓</span><strong>Raven Care</strong><b>R$ 49,90/mês</b><small>Monitoramento e verificações</small></span></label>
+    <label class="raven-choice-card"><input type="radio" name="servico" value="Raven Pro — R$ 99,90/mês" required><span class="raven-choice-content"><span class="raven-choice-check" aria-hidden="true">✓</span><strong>Raven Pro</strong><b>R$ 99,90/mês</b><small>Monitoramento e pequenas atualizações</small></span></label>
+    <label class="raven-choice-card"><input type="radio" name="servico" value="Raven Max — R$ 199,90/mês" required><span class="raven-choice-content"><span class="raven-choice-check" aria-hidden="true">✓</span><strong>Raven Max</strong><b>R$ 199,90/mês</b><small>Mais alterações e suporte prioritário</small></span></label>
+   </div></div>
+   <div class="raven-choice-category"><h3>Serviços técnicos</h3><div class="raven-choice-grid">
+    <label class="raven-choice-card"><input type="radio" name="servico" value="Manutenção PC" required><span class="raven-choice-content"><span class="raven-choice-check" aria-hidden="true">✓</span><strong>Manutenção PC</strong><b>Sob orçamento</b><small>Diagnóstico, limpeza e upgrades</small></span></label>
+    <label class="raven-choice-card"><input type="radio" name="servico" value="Suporte Técnico" required><span class="raven-choice-content"><span class="raven-choice-check" aria-hidden="true">✓</span><strong>Suporte Técnico</strong><b>Sob orçamento</b><small>Programas, sistemas e assistência</small></span></label>
+    <label class="raven-choice-card"><input type="radio" name="servico" value="Redes e TI" required><span class="raven-choice-content"><span class="raven-choice-check" aria-hidden="true">✓</span><strong>Redes e TI</strong><b>Sob orçamento</b><small>Wi-Fi, roteadores e conectividade</small></span></label>
+   </div></div>
+  </fieldset>
+  <div class="raven-selected-summary" id="ravenSelectedSummary" role="status" aria-live="polite">Nenhuma opção selecionada ainda.</div>
+  <div class="raven-form-grid"><label>02 · Prazo desejado <select id="ravenDeadline" name="prazo"><option>Flexível</option><option>Até 30 dias</option><option>Urgente — consultar disponibilidade</option></select></label></div>
+  <label>03 · Conte um pouco sobre o projeto <textarea id="ravenDetails" name="detalhes" rows="4" maxlength="1500" placeholder="O que você precisa? Quais funcionalidades gostaria de ter?"></textarea></label>
+  <button type="submit" class="button primary raven-submit">Preparar orçamento no WhatsApp ↗</button>
+  <p id="ravenQuoteStatus" class="raven-fineprint" role="status" aria-live="polite">Nenhum pedido será enviado automaticamente sem sua confirmação no WhatsApp.</p> </form></div>
+</section>
 
         <section id="projetos" class="section projects-section">
 
@@ -358,46 +441,6 @@
                 <a href="#" class="button primary" id="whatsappButton">
                     Falar pelo WhatsApp
                 </a>
-
-<!-- RAVEN ORÇAMENTOS 1.0 -->
-<div class="raven-orcamento">
-  <h3>Solicite seu orçamento</h3>
-  <p>Conte sobre seu projeto e receba um atendimento personalizado.</p>
-
-  <form id="formOrcamento">
-    <label for="orcNome">Seu nome</label>
-    <input type="text" id="orcNome" name="nome"
-           placeholder="Digite seu nome" required>
-
-    <label for="orcServico">Serviço desejado</label>
-    <select id="orcServico" name="servico" required>
-      <option value="">Selecione um serviço</option>
-      <option value="Site institucional">Site institucional</option>
-      <option value="Landing page">Landing page</option>
-      <option value="Manutenção de computadores">Manutenção de computadores</option>
-      <option value="Suporte técnico">Suporte técnico</option>
-      <option value="Outro serviço">Outro serviço</option>
-    </select>
-
-    <label for="orcPrazo">Prazo desejado</label>
-    <select id="orcPrazo" name="prazo" required>
-      <option value="">Selecione o prazo</option>
-      <option value="Sem urgência">Sem urgência</option>
-      <option value="Até 15 dias">Até 15 dias</option>
-      <option value="Até 7 dias">Até 7 dias</option>
-    </select>
-
-    <label for="orcDescricao">Descreva seu projeto</label>
-    <textarea id="orcDescricao" name="descricao"
-              placeholder="Explique o que você precisa..."
-              rows="5" required></textarea>
-
-    <button type="submit" class="button primary">
-      Solicitar orçamento pelo WhatsApp
-    </button>
-  </form>
-</div>
-<!-- FIM RAVEN ORÇAMENTOS -->
 
             </div>
 
