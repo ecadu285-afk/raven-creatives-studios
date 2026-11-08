@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Configure o número comercial com DDI + DDD + número, apenas dígitos.
   // Exemplo fictício: "5582999999999". Deixe vazio para o usuário escolher o destinatário.
-  const WHATSAPP_RAVEN = "";
+  const WHATSAPP_RAVEN = "5582988835803";
   const resumo = document.getElementById("ravenSelectedSummary");
   const opcoes = [...document.querySelectorAll('input[name="servico"]')];
   function escolherServico(valor) {
