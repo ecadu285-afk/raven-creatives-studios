@@ -1,35 +1,243 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Portfólio da Raven"><meta name="theme-color" content="#080b08"><title>Projetos | Raven Creatives Studios</title><link rel="stylesheet" href="style.css"></head><body><header class="header"><div class="container nav"><a class="logo" href="index.html"><img class="logo-img" src="ogo-raven.jpeg" alt="Logo Raven Creatives Studios"></a><button id="menuToggle" class="menu-toggle" aria-controls="menuMobile" aria-expanded="false" aria-label="Abrir menu">☰</button><nav id="menuMobile"><a href="index.html">Início</a><a href="servicos.html">Serviços</a><a href="planos.html">Planos</a><a href="projetos.html">Projetos</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a></nav><a class="nav-button" href="contato.html">Fale conosco</a></div></header><main class="r3-page"><div class="container"><div class="r3-intro"><p class="tag">PORTFÓLIO</p><h1>Projetos que ganham forma.</h1><p>Conheça trabalhos e experiências digitais desenvolvidas pela Raven.</p></div><section class="section projects-section" id="projetos">
-<div class="container">
-<div class="section-title">
-<p class="tag">
-                        PORTFÓLIO
-                    </p>
-<h2>
-                        Projetos que estamos construindo
-                    </h2>
-</div>
-<div class="project">
-<div class="project-image"><div class="r41-project-chrome"><span>● ● ●</span><span>PROJETO / DEMONSTRAÇÃO</span><span>↗</span></div>
-<img alt="Apresentação do projeto Barbearia Imperial" class="project-preview" loading="lazy" src="barbearia-imperial.png"/>
-</div>
-<div class="project-info">
-<p class="project-category">
-                            PROJETO DEMONSTRATIVO
-                        </p>
-<h3>
-                            Barbearia Imperial
-                        </h3>
-<p>
-                            Um projeto demonstrativo criado pela
-                            Raven Creatives Studios
-                          para mostrar como
-                            um pequeno negócio pode ter uma presença
-                            profissional na internet.
-                        </p>
-<a class="btn btn-outline" href="https://ecadu285-afk.github.io/Barbearia-Imperial/" rel="noopener noreferrer" target="_blank">
-  Ver projeto
-</a>
-</div>
-</div>
-</div>
-</section></div></main><footer class="r3-footer"><div class="container">© Raven Creatives Studios · Soluções digitais e tecnologia · <a href="contato.html">Entre em contato</a></div></footer><script src="paginas.js" defer></script></body></html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Conheça os projetos desenvolvidos pela Raven Creatives Studios.">
+  <meta name="theme-color" content="#080b08">
+
+  <title>Projetos | Raven Creatives Studios</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Ajustes exclusivos da página de projetos */
+
+    .projects-section .project {
+      min-width: 0;
+    }
+
+    .projects-section .project + .project {
+      margin-top: 65px;
+      padding-top: 55px;
+      border-top: 1px solid #344626;
+    }
+
+    .projects-section .project-image {
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .projects-section .project-image a {
+      display: block;
+      width: 100%;
+    }
+
+    .projects-section .project-preview {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .projects-section .project-info {
+      min-width: 0;
+    }
+
+    @media (max-width: 850px) {
+      .projects-section .project {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .projects-section .project-image {
+        min-height: 0;
+      }
+
+      .projects-section .project + .project {
+        margin-top: 45px;
+        padding-top: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+  <header class="header">
+    <div class="container nav">
+
+      <a class="logo" href="index.html">
+        <img
+          class="logo-img"
+          src="ogo-raven.jpeg"
+          alt="Logo Raven Creatives Studios">
+      </a>
+
+      <button
+        id="menuToggle"
+        class="menu-toggle"
+        aria-controls="menuMobile"
+        aria-expanded="false"
+        aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <nav id="menuMobile">
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="planos.html">Planos</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+      <a class="nav-button" href="contato.html">
+        Fale conosco
+      </a>
+
+    </div>
+  </header>
+
+  <main class="r3-page">
+    <div class="container">
+
+      <div class="r3-intro">
+        <p class="tag">PORTFÓLIO</p>
+        <h1>Projetos que ganham forma.</h1>
+        <p>
+          Conheça trabalhos e experiências digitais
+          desenvolvidas pela Raven.
+        </p>
+      </div>
+
+      <!-- PORTFÓLIO -->
+      <section class="section projects-section" id="projetos">
+        <div class="container">
+
+          <div class="section-title">
+            <p class="tag">PORTFÓLIO</p>
+            <h2>Projetos que estamos construindo</h2>
+          </div>
+
+          <!-- PROJETO 01: BARBEARIA IMPERIAL -->
+          <div class="project">
+
+            <div class="project-image">
+              <div class="r41-project-chrome">
+                <span>● ● ●</span>
+                <span>PROJETO / DEMONSTRAÇÃO</span>
+                <span>↗</span>
+              </div>
+
+              <img
+                src="barbearia-imperial.png"
+                alt="Mockup do site Barbearia Imperial"
+                class="project-preview"
+                loading="lazy">
+            </div>
+
+            <div class="project-info">
+
+              <p class="project-category">
+                PROJETO DEMONSTRATIVO
+              </p>
+
+              <h3>Barbearia Imperial</h3>
+
+              <p>
+                Um projeto demonstrativo criado pela
+                Raven Creatives Studios para mostrar
+                como um pequeno negócio pode ter uma
+                presença profissional na internet.
+              </p>
+
+              <a
+                href="https://ecadu285-afk.github.io/Barbearia-Imperial/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline">
+                Ver projeto
+              </a>
+
+            </div>
+          </div>
+
+          <!-- PROJETO 02: RAVEN PC BUILDER -->
+          <div class="project" id="portfolio-pc-builder">
+
+            <div class="project-image">
+
+              <a
+                href="https://ecadu285-afk.github.io/raven-pc-builder/inicio.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Conhecer Raven PC Builder">
+
+                <img
+                  src="pc-builder-mockup.png"
+                  alt="Mockup da Raven PC Builder em notebook e celular"
+                  class="project-preview"
+                  loading="lazy">
+
+              </a>
+
+            </div>
+
+            <div class="project-info">
+
+              <p class="project-category">
+                PLATAFORMA DIGITAL
+              </p>
+
+              <h3>Raven PC Builder</h3>
+
+              <p>
+                Plataforma desenvolvida pela Raven
+                Creatives Studios para ajudar usuários
+                a montar computadores, pesquisar
+                componentes e comparar opções de compra.
+
+                O projeto reúne um montador 3D,
+                catálogo de peças, comparação de lojas
+                e conteúdos educativos sobre hardware.
+              </p>
+
+              <a
+                href="https://ecadu285-afk.github.io/raven-pc-builder/inicio.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline">
+                Ver projeto
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="r3-footer">
+    <div class="container">
+      © 2026 Raven Creatives Studios
+      · Soluções digitais e tecnologia ·
+
+      <a href="contato.html">
+        Entre em contato
+      </a>
+    </div>
+  </footer>
+
+  <script src="paginas.js" defer></script>
+
+</body>
+</html>
