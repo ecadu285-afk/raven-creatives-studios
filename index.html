@@ -264,3 +264,65 @@ menuMobile.querySelectorAll("a").forEach(link => {
 <script src="script.js"></script>
 </body>
 </html>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const barbearia = document.querySelector(".projects-section .project");
+
+  if (!barbearia || document.getElementById("portfolio-pc-builder")) return;
+
+  barbearia.insertAdjacentHTML("afterend", `
+    <div class="project" id="portfolio-pc-builder"
+         style="margin-top:65px;padding-top:45px;border-top:1px solid #344626">
+
+      <div class="project-image" style="padding:12px;overflow:hidden">
+        <a href="https://ecadu285-afk.github.io/raven-pc-builder/inicio.html"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Conhecer Raven PC Builder"
+           style="display:block;width:100%">
+          <div style="min-height:290px;padding:28px 18px;border-radius:12px;
+              background:radial-gradient(circle at 60% 30%,#42216b,#100d1e 75%);
+              border:1px solid #7044a6;display:flex;flex-direction:column;
+              justify-content:center;align-items:center;text-align:center;gap:16px">
+
+            <span style="color:#bc91ff;letter-spacing:3px;font-size:12px">
+              RAVEN CREATIVE STUDIOS
+            </span>
+
+            <strong style="font-size:clamp(28px,5vw,45px);
+                line-height:1.15;color:white">
+              RAVEN<br>
+              <span style="color:#bc91ff">PC BUILDER</span>
+            </strong>
+
+            <span style="color:#ddd0ec;font-size:14px">
+              Montagem 3D • Peças • Comparação de lojas
+            </span>
+
+            <span style="padding:12px 20px;background:#a975ff;
+                color:#10091d;border-radius:8px;font-weight:bold">
+              EXPLORAR PLATAFORMA ↗
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <div class="project-info">
+        <p class="project-category">PLATAFORMA DIGITAL</p>
+        <h3>Raven PC Builder</h3>
+        <p>
+          Plataforma desenvolvida pela Raven Creatives Studios
+          para montagem de computadores, pesquisa de componentes,
+          comparação de lojas e aprendizado sobre hardware.
+          Inclui montador 3D, catálogo de peças e conteúdos educativos.
+        </p>
+        <a class="btn btn-outline"
+           href="https://ecadu285-afk.github.io/raven-pc-builder/inicio.html"
+           target="_blank" rel="noopener noreferrer">
+          Ver projeto
+        </a>
+      </div>
+    </div>
+  `);
+});
+</script>
